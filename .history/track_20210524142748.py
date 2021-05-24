@@ -29,7 +29,7 @@ def find_common(circles, x, y ):
         if(perc_change(x,y,i[0],i[1])):
             return True
         else:
-            continue
+            print(x,y,i[0],i[1])
     return False
 
 

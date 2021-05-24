@@ -29,7 +29,7 @@ def find_common(circles, x, y ):
         if(perc_change(x,y,i[0],i[1])):
             return True
         else:
-            continue
+            print(x,y,i[0],i[1])
     return False
 
 
@@ -105,10 +105,7 @@ def start():
     while True:
         success, img=cap.read()
         img=ret_im(img)
-        try:
-            ret, buffer = cv2.imencode('.jpg', img)
-        except:
-            continue
+        ret, buffer = cv2.imencode('.jpg', img)
         frame = buffer.tobytes()
         yield (b'--frame\r\n'
                 b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')

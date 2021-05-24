@@ -46,8 +46,8 @@ def ret_im(img):
     ORANGE_MIN = np.array([5, 50, 50],np.uint8)
     ORANGE_MAX = np.array([15, 255, 255],np.uint8)
     #mask = cv2.inRange(img,ORANGE_MIN,ORANGE_MAX)
-    mask = cv2.inRange(img,lower_g,upper_g)
-    #mask = cv2.inRange(img,lower_blue,upper_blue)
+    #mask = cv2.inRange(img,lower_g,upper_g)
+    mask = cv2.inRange(img,lower_blue,upper_blue)
     img = cv2.bitwise_and(img,img , mask=mask)
     #return img
     img=cv2.cvtColor(img,cv2.COLOR_HSV2RGB)

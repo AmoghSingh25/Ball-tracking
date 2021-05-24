@@ -8,7 +8,7 @@ app=Flask(__name__)
 def vid():
     return Response(start(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/')
+@app.route('/home')
 def hom():
     return render_template("hm.html")
 
